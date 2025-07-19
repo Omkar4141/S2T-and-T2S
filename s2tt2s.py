@@ -3,6 +3,7 @@
 import speech_recognition as sr
 import pyttsx3
 
+
 class SpeechInterface:
     def __init__(self, voice_id=None, rate=150, volume=1.0):
         # Initialize recognizer and text-to-speech engine
@@ -50,7 +51,9 @@ class SpeechInterface:
         if response_text:
             self.speak(response_text)
         return spoken_input
-      
+
+
 speech_io = SpeechInterface()
 
 user_query = speech_io.listen()
+speech_io.speak(user_query)
